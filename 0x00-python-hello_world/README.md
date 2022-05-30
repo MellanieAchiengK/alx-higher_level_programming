@@ -13,6 +13,15 @@ This directory holds code that illustrates an essential concept of python progra
 8. print modified variable without creating new variable or string literals
 9. Python script that The Zen of , by Tim Peters
 10. interview prep - a function in C that checks if a singly linked list has a cycle in it
+11. print string to stderr using write
+12. shell script that compiles a python script file
+13. Python function def magic_calculation(a, b): that does exactly the same as the following Python bytecode:
+ 3           0 LOAD_CONST               1 (98)
+              3 LOAD_FAST                0 (a)
+              6 LOAD_FAST                1 (b)
+              9 BINARY_POWER
+             10 BINARY_ADD
+             11 RETURN_VALUE
 
 
 ## Requirements
