@@ -12,14 +12,13 @@ This directory holds code that illustrates an essential concept of python progra
 7. manipulate and print string index range
 8. print modified variable without creating new variable or string literals
 9. Python script that The Zen of , by Tim Peters
-10. a function in C that checks if a singly linked list has a cycle in it
+10. interview prep - a function in C that checks if a singly linked list has a cycle in it
 
 
 ## Requirements
-* Ubuntu 14.04 LTS
-* Python 3.4
-* pip3 1.5
-* pep8 1.7
+* Ubuntu 20.04 LTS
+* Python 3.8.5
+* pep8 
 
 ## Author
 Work is owned and maintained by Mellanie Achieng.   
