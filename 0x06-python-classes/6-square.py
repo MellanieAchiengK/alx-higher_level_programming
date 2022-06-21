@@ -48,15 +48,16 @@ class Square:
 
     """ prints square with # in stdout """
     def my_print(self):
-        size = self.__size
-        x = self.__position[1]
-        y = self.__position[0]
-
-        if size == 0:
+        if self.size == 0:
             print()
-
-        for newlines in range(x):
-            print()
-
-        for row in range(size):
-            print((' ' * y) + ('#' * size))
+        else:
+            x = self.position[0]
+            y = self.position[1]
+            for i in range(y):
+                print("")
+            for row in range(self.size):
+                for j in range(x):
+                    print(" ", end="")
+                for col in range(self.size):
+                    print("#", end="")
+                print()
