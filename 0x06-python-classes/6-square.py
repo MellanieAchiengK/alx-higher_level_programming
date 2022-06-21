@@ -48,7 +48,7 @@ class Square:
 
     """ prints square with # in stdout """
     def my_print(self):
-         size = self.__size
+        size = self.__size
         x = self.__position[1]
         y = self.__position[0]
 
