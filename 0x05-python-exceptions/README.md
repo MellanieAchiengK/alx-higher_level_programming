@@ -1,4 +1,4 @@
-## Python - Execptions
+## Python - Exceptions
 This directory holds code that illustrates an essential concept of python programming.
 
 ### Description of files:
