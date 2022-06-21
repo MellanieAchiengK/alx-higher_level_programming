@@ -25,6 +25,7 @@ class Square:
     def area(self):
         return self.__size * self.__size
 
+    """ prints square with # in stdout """
     def my_print(self):
         if self.__size == 0:
             print()
