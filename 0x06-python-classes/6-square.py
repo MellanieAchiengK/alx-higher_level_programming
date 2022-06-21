@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Defines class Square """
+
 class Square:
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
@@ -37,9 +40,11 @@ class Square:
 
         self.__position = value
 
+    """ returns area of the square """
     def area(self):
         return self.__size * self.__size
 
+    """ prints square with # in stdout """
     def my_print(self):
         if self.__size == 0:
             print()

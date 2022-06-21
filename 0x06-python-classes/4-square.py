@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""
+Defines class Square """
+
 class Square:
+    """ define private instant attribute """
     def __init__(self, size=0):
         self.__size = size
 
@@ -16,5 +20,6 @@ class Square:
         else:
             self.__size = value
 
+    """ returns area of the square """
     def area(self):
         return self.__size * self.__size
