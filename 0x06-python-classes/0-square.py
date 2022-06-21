@@ -3,5 +3,6 @@
 Define empty class Square
 """
 
+
 class Square:
     pass

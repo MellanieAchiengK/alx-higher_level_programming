@@ -3,8 +3,9 @@
 Define class Square
 """
 
+
 class Square:
-   """ define optional private size instant attribute """
+    """ define optional private size instant attribute """
     def __init__(self, size=0):
         if type(size) != int:
             raise TypeError("size must be an integer")

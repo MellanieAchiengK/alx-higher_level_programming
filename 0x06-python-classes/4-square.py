@@ -2,6 +2,7 @@
 """
 Defines class Square """
 
+
 class Square:
     """ define private instant attribute """
     def __init__(self, size=0):

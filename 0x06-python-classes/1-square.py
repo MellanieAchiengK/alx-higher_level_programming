@@ -3,6 +3,7 @@
 Define empty class Square with size attribute
 """
 
+
 class Square:
     """ Define class Square with private instance attribute"""
     def __init__(self, size):
