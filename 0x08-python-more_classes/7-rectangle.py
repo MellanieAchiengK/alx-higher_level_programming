@@ -61,22 +61,18 @@ class Rectangle:
         rectangle = []
         if self.__width == 0 or self.__height == 0:
             return rectangle
-        else:
-            for i in range(self.__height):
-                for j in range(self.__width):
-                    rectangle.append("#")
-                if i < self.__height - 1:
-                    rectangle.append("\n")
-        return "".join(rectangle)
+
+        for i in range(self.__height):
+            [rectangle.append(str(self.print_symbol))
+             for j in range(self.__width)]
+            if i != self.__height - 1:
+                rectangle.append("\n")
+        return ("".join(rectangle))
 
     """ return a string representation of the rectangle
     to be able to recreate a new instance """
-    def __rep__(self):
-        wid = str(self.__width)
-        hei = str(self.__height)
-
-        rectangle = "Rectangle(" + wid + ", " + hei + ")"
-        return rectangle
+    def __repr__(self):
+        return "Rectangle({}, {}".format(self.__width, self.__height)
 
     """ prints a message for del """
     def __del__(self):
