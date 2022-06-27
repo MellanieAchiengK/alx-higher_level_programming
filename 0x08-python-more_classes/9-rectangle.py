@@ -15,7 +15,7 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-        Rectangle.number_of_instances +=1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -71,7 +71,7 @@ class Rectangle:
 
     """ returns a Rectangle instance with equal width and height """
     @classmethod
-    def square(cls,size=0):
+    def square(cls, size=0):
         return cls(width=size, height=size)
 
     """ prints rectangle with # """
