@@ -6,9 +6,9 @@ class BaseGeometry
 
 class BaseGeometry:
     """ initializes class """
-    def __innit__(self):
+    def __init__(self):
         pass
 
-    """ public instance method area """
+    """  area  """
     def area(self):
         raise Exception("area() is not implemented")
