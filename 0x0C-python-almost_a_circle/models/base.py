@@ -7,7 +7,7 @@ import json
 
 class Base:
     """ base of all classes """
-    #private class
+    # private class
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -50,7 +50,7 @@ class Base:
     def create(cls, **dictionary):
         """ returns instance with all set attributes """
         if cls.__name__ == "Rectangle":
-            temp_instance = cls(3,3)
+            temp_instance = cls(3, 3)
         elif cls.__name__ == "Square":
             temp_instance = cls(3)
         temp_instance.update(**dictionary)
