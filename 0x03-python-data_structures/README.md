@@ -16,8 +16,7 @@ This directory holds code that illustrates an essential concept of python progra
 11. Function that deletes the item at a specific position in a list
 12. Switches value of a and b
 13. Interview Prep: Write a function in C that checks if a singly linked list is a palindrome.
-
-
+14. Create a C function that prints some basic info about Python lists.
 
 ## Requirements
 * Ubuntu 20.04 LTS
