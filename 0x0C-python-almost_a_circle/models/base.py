@@ -3,6 +3,8 @@
 base
 """
 import json
+import csv
+import turtle
 
 
 class Base:
@@ -71,3 +73,70 @@ class Base:
             else:
                 result.append(item)
         return result
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ serializes in CSV """
+        filename = cls.__name__ + ".csv"
+        with open(filename, "w", newline="") as csvfile:
+            if list_objs is None:
+                f.write("")
+            else:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                else:
+                    fieldnames = ["id", "size", "x", "y"]
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                for obj in list_objs:
+                    writer.writerow(obj.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ deserializes in CSV """
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, "r", newline="") as csvfile:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                else:
+                    fieldnames = ["id", "size", "x", "y"]
+                list_dictionaries = csv.DictReader(csvfile,
+                                                   fieldnames=fieldnames)
+                list_dictionaries = [dict([i, int(j)]for i, j in dicti.items())
+                                     for dicti in list_dictionaries]
+                return [cls.create(**dicti) for dicti in list_dictionaries]
+        except IOError:
+            return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+
+        turt = turtle.Turtle()
+        turt.pensize(2)
+        turt.shape("arrow")
+
+        turt.color("navy")
+        for rectangle in list_rectangles:
+            turt.showturtle()
+            turt.up()
+            turt.goto(rectangle.x, rectangle.y)
+            turt.down()
+            for i in range(2):
+                turt.forward(rectangle.width)
+                turt.left(90)
+                turt.forward(rectangle.height)
+                turt.left(90)
+            turt.hideturtle()
+
+        turt.color("red")
+        for square in list_squares:
+            turt.showturtle()
+            turt.up()
+            turt.goto(square.x, square.y)
+            turt.down()
+            for i in range(4):
+                turt.forward(square.width)
+                turt.left(90)
+            turt.hideturtle()
+
+        turtle.done()
