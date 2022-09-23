@@ -6,6 +6,6 @@ if __name__ == "__main__":
     import requests
     import sys
 
-    value = {'email' : sys.argv[2]}
+    value = {'email': sys.argv[2]}
     output = requests.post(sys.argv[1], value)
     print(output.text)
